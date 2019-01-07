@@ -105,7 +105,7 @@ STATIC_URL = '/static/'
 
 PAYTM_MERCHANT_KEY = ""
 PAYTM_MERCHANT_ID = ""
-HOST_URL = "http://localhost:8080"
+HOST_URL = "http://localhost:8000"
 PAYTM_CALLBACK_URL = "/paytm/response/"
 
 if DEBUG:

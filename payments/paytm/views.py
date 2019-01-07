@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils.translation import get_language
@@ -8,7 +9,7 @@ from django.conf import settings
 from . import Checksum
 
 
-from paytm.models import PaytmHistory
+from .models import PaytmHistory
 # Create your views here.
 
 @login_required
@@ -24,14 +25,14 @@ def payment(request):
     # Generating unique temporary ids
     order_id = Checksum.__id_generator__()
 
-    bill_amount = 100
+    bill_amount = 1
     if bill_amount:
         data_dict = {
                     'MID':MERCHANT_ID,
                     'ORDER_ID':order_id,
                     'TXN_AMOUNT': bill_amount,
-                    'CUST_ID':'harish@pickrr.com',
-                    'INDUSTRY_TYPE_ID':'Retail',
+                    'CUST_ID':'bhupendra@credr.com',
+                    'INDUSTRY_TYPE_ID':'Retail102',
                     'WEBSITE': settings.PAYTM_WEBSITE,
                     'CHANNEL_ID':'WEB',
                     #'CALLBACK_URL':CALLBACK_URL,
